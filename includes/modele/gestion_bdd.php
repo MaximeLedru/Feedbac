@@ -17,6 +17,15 @@ function GetAllRequests($year) // obtenir toutes les requêtes de demie journée
 		
     return $rawdata;
 }
+function GetLesEleves(){
+	$connect = new connexion();
+	$bdd = $connect->getInstance();
+	$lesdemandes = $bdd->query(' SELECT * FROM utilisateur WHERE `droits` = 1  ');
+	$rawdata = $lesdemandes->fetchAll();
+		
+    return $rawdata;
+
+}
 
 function GetRequestbyID($ID) // obtenir toutes les requêtes de demie journée d'un mois donné en parametre 
 {

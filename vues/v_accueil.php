@@ -54,10 +54,13 @@
 		 include "v_menu_user.php" ; 
 		  
 	  }
-	  else
+	  if($_SESSION['droits'] == "0")
 	  {
 		  
 		  include "v_menu_admin.php";
+	  }
+	  if($_SESSION['droits'] == "2"){
+	  	include "v_menu_prof.php";
 	  }
 	  
 	   ?>

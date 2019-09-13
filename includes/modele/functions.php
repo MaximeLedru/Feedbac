@@ -503,6 +503,53 @@ function printUsers()
             Matricule : <input class="input_component" id="matricule" type="text" name="matricule" oninput="checkCreateUserFields()"/>
 	</form>');
 }
+function printEtudiant()
+{
+	//vars
+	$users = null;
+	$droits = '';
+	/********************************************************************/
+	//attributions
+	$users = getLesEleves();
+	$reserves = "";
+	
+	/********************************************************************/
+	echo('<div class="wrapper_users">');
+	//print
+	foreach ($users as $user)
+	{
+		
+		$form = "";
+
+
+		
+		
+		echo '
+
+	<div class="utilisateur">
+			<div class="utilisateur_barre_2">
+				Prénom :'. $user['prenom'].'	Nom :'.$user['nom']   .'	Téléphone: '. $user['telephone'].'	Série du BAC : '.$user['serie'].'	Année du BAC: '.$user['session'].' <br>Parcours : '.$user['parcours'].'
+				
+			</div>
+			<div class="utilisateur_barre_form">
+			
+				'.$form.'
+				
+				
+				
+			</div>
+			'.$reserves.'
+
+		  
+		  </div>  
+	
+	';
+		
+	}
+	
+	
+}
+
 
 function printFerie()
 {

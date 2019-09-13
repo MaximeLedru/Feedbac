@@ -24,6 +24,12 @@ switch ($uc)
         }
         break; 
     }
+        case 'professeur' : { 
+        if ($_SESSION['droits'] == "2") {
+            include "c_professeur.php";            
+        }
+        break; 
+    }
 	
 }
 ?>

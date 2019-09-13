@@ -47,7 +47,6 @@ switch ($action)
                 $_SESSION['nom'] = $luser['nom'];
                 $_SESSION['prenom'] = $luser['prenom'];
                 $_SESSION['mail'] = $luser['mail'];
-                $_SESSION['matricule'] = $luser['Matricule'];
                 $_SESSION['droits'] = $luser['droits'];
                 
                 //redirection vers la page d'accueil
